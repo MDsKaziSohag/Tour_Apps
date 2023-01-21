@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:my_application/Constines/Langages/Localizetion.dart';
 import 'package:my_application/Constines/Langages/langages.dart';
 import 'package:my_application/Ui/viewsAll/mainHomePage.dart';
+import 'package:my_application/Ui/viewsAll/splash.dart';
 import 'Ui/ModelsAll/Theme.dart';
 
 void main() async {
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
             theme: AppTheme().lightTheme(context),
             darkTheme: AppTheme().darkTheme(context),
             themeMode: ThemeMode.system,
-            home: HomePageOne(),
+            home: SplashScreen(),
           );
         });
   }

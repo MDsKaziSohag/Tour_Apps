@@ -40,14 +40,24 @@ class Settings extends StatelessWidget {
     return showDialog(
         context: context,
         builder: (context) => AlertDialog(
+        
               title: Text("Select your language!"),
               content: Row(
                 children: [
-                  TextButton(onPressed: () {}, child: Text("বাংলা")),
+                  TextButton(onPressed: () {
+                    Get.updateLocale(
+                    Locale('bn', 'BD'),
+                  );
+                  }, child: Text("বাংলা")),
                   SizedBox(
                     width: 20.w,
                   ),
-                  TextButton(onPressed: () {}, child: Text("English")),
+                  TextButton(onPressed: () {
+                     Get.updateLocale(
+                    Locale('en', 'US'),
+                    
+                  );
+                  }, child: Text("English")),
                 ],
               ),
             ));
@@ -56,11 +66,14 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
+        
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
         title: AppStyleText(
+          
             text: AppString.Settings,
             fontsize: 25.sp,
             FontWeight: FontWeight.w600,
